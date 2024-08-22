@@ -1,0 +1,9 @@
+package dto;
+
+public class MemberSaveResponseDto {
+    private final String name;
+
+    public MemberSaveResponseDto(String name){
+        this.name=name;
+    }
+}
