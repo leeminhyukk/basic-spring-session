@@ -1,11 +1,12 @@
-package dto;
+package com.sparta.basicspringsession.dto;
+
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@Getter
 @AllArgsConstructor
-public class MemberUpdateResponseDto {
+public class MemberDetailResponseDto {
     private final Long id;
     private final String name;
-
-
 }

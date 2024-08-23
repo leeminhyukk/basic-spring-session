@@ -1,16 +1,15 @@
-package service;
+package com.sparta.basicspringsession.service;
 
 
-import dto.*;
-import entity.Member;
+import com.sparta.basicspringsession.dto.*;
+import com.sparta.basicspringsession.repository.MemberRepository;
+import com.sparta.basicspringsession.entity.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repository.MemberRepository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 
 @Service
@@ -62,10 +61,11 @@ public class MemberService {
         return new MemberUpdateResponseDto(member.getId(),member.getName());
     }
 
+    @Transactional
     public void deleteMember(Long memberId) {
         Member member = memberRepository.findById(memberId).orElseThrow(() -> new NullPointerException("멤버가 없습니다."));
 
-        // 레퍼지토리에 따로 delet 란느 메서드를 만들지 않았지만 사용 가능했다.
+        // 레퍼지토리에 따로 delete 라는 메서드를 만들지 않았지만 사용 가능했다.
         memberRepository.delete(member);
 
     }

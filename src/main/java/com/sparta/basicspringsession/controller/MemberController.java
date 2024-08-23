@@ -1,10 +1,10 @@
-package controller;
+package com.sparta.basicspringsession.controller;
 
-import dto.*;
+import com.sparta.basicspringsession.dto.*;
+import com.sparta.basicspringsession.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.MemberService;
 
 import java.util.List;
 
@@ -21,7 +21,6 @@ public class MemberController {
         // 객체만들고, savaMember 메서드 적용하고, 그렇게 생성된 Dto 리턴.
         // controller -> service -> repository -> service -> controller -> client 구조 때문
         // 중 controller -> service 라고 볼 수 있다.
-        //
     }
 
     // 전체 조회

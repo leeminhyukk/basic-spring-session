@@ -1,4 +1,4 @@
-package dto;
+package com.sparta.basicspringsession.dto;
 
 import lombok.Getter;
 
