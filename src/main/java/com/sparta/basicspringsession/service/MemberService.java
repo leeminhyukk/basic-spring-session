@@ -52,6 +52,7 @@ public class MemberService {
         return new MemberDetailResponseDto(member.getId(),member.getName());
     }
 
+    //수정
     @Transactional
     public MemberUpdateResponseDto UpdateMember(Long memberId, MemberUpdateRequestDto updateRequestDto) {
         Member member = memberRepository.findById(memberId).orElseThrow(() -> new NullPointerException("멤버가 없습니다."));
